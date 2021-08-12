@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+:root {
+    --nav-bg: #34495e;
+    --hero-bg: #C5CAE9;
+}
+
+html {
+    box-sizing: inherit;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--nav-bg);
+    padding: 1.5rem 4rem;
+}
+
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    color: #fff;
+    font-weight: 700;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    padding: 0 1rem;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+nav a:hover{
+    color: var(--hero-bg);
+    transform: rotate(6deg);
+}
+/* Hero */
+.hero {
+    background-color: var(--hero-bg);
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-inner {
+    max-width: 60%;
+}
+
+.hero-inner h2 {
+    font-size: 4rem;
+}
+
+.hero-inner p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-inner a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--nav-bg);
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.hero-inner a:hover {
+    background-color: #0D47A1;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.features-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.features-inner h3 {
+    color: var(--nav-bg);
+    font-size: 1.5rem;
+}
+
+.features-inner p {
+    line-height: 1.5;
+}
+.features-item{
+    padding: .5rem;
+}
+
+.features-item:nth-child(odd) {
+    background-color: var(--hero-bg);
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-bg);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Media Query */
+
+@media (max-width: 800px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .hero-inner {
+        max-width: 80%;
+    }
+
+    .features {
+        padding: 2rem 1rem;
+    }
+}
